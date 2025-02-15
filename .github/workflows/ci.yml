@@ -17,7 +17,7 @@ jobs:
           java-version: '17'
 
       - name: Compile Java files
-        run: javac src/main/java/com/example/App.java
+        run: javac -d out src/main/java/com/example/*.java
 
       - name: Run Java Application
-        run: java -cp src/main/java/com/example App
+        run: java -cp out com.example.App
